@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펀드매니저</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="./js/mainfund.js"></script>
+    <script src="./js/Sign.js"></script>
+    <script src="./js/Fund.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="flex-center"> 
+            <div class="con flex-between">
+            <div class="logo">
+                <h1>Kick<span> starter</span></h1>
+            </div>
+            <nav>
+                <ul class="flex-between" id="navMenu">
+                    <li class="flex-center" data-idx="0">메인페이지</li>
+                    <li class="flex-center" data-idx="1">펀드 등록</li>
+                    <li class="flex-center" data-idx="2">펀드 보기</li>
+                    <li class="flex-center" data-idx="3">투자자 목록</li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <div id="content">
+            <div class="menu-page active visu">
+                <section id="visual">
+                    <video autoplay="autoplay" preload="auto" loop="loop">
+                        <source src="images/index_mov_1.mp4" type="video/mp4">
+                        </video>
+                        <div class="logo-group flex-center">`
+                            <h2>크라우드 펀드와 함께해요.</h2>
+                            <div class="t1">펀드평가의 올바른 기준
+                            <span class="txt"></span>
+                        </div>
+                        <div class="con">
+                            <section id="fundMain">
+            
+                            </section>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="menu-page fundForm">
+                <div class="con flex-center">
+                <div class="form flex-center">
+                    <div class="can">펀드등록</div>
+                    <div class="form-group flex-center">
+                    <input type="text" id="num" readonly>
+                    <input type="text"  maxlength="100" id="name" placeholder="펀드이름">
+                    <input type="date" id="endDate" placeholder="마감일자"> 
+                    <input type="time" id="endTime" step="1">
+                    <input type="number" id="total" placeholder="모집금액">
+                    <button id="createBtn">제출하기</button>
+                </div>
+            </div>
+                </div>
+            </div>
+            <div class="menu-page back">
+                <div class="fund-list">
+                    <div class="con">
+                        
+                </div>
+                </div>
+            </div>
+            <div class="menu-page four">
+                <div class="con">
+                    <div class="inv-item flex-between">
+                        <span>펀드번호</span>
+                        <span>창업펀드명</span>
+                        <span>투자자명</span>
+                        <span>금액</span>
+                        <span>지분</span>
+                        <span>계약서</span>
+                    </div>
+                    <div class="conten">
+                    <div class="inv-con active" data-idx="0">
+                <div class="inv-list">
+                </div>
+            </div>
+        </div>
+                <div class="Btn-group flex-center">
+                    <button class="Btn prev">[</button>
+                <div class="now">1</div>/
+                <div class="maxPa">  2</div>
+                    <button class="Btn next">]</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup" class="flex-center">
+            <div class="inner flex-center" style="flex-direction:column">
+                <h2>투자 펀딩 계약서</h2>
+                <input type="text" id="fnumber" readonly>
+                <input type="text" id="fname" readonly>
+                <input type="text" id="iname" maxlength="100" placeholder="투자자명">
+                <input type="number" id="money" placeholder="금액" step="1">
+                <canvas width="200" height="100"></canvas>
+                <div class="button-group flex-between">
+                    <button id="submit">제출하기</button>
+                    <button id="close">닫기</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="con flex-center">
+            Tel) 031-778-2300<br>
+            우) 13587 경기 성남시 분당구 불정로386번길 35 양영디지털고등학교<br>
+            Copyright Gondr Allright reserved. Since 2017-03-01
+        </div>
+        </footer>
+    </div>
+</body>
+</html>
